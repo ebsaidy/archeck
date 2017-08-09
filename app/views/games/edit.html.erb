@@ -1,0 +1,30 @@
+
+<center><h3>Update Game</h3></center></br>
+</div>
+<form  action="/games/update" method="post" name="" id="">
+
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+		<input type="hidden" name="id" value="<%=@id%>">
+		<label>Name of Game</label>
+		<input type="text" name="name_of_game" value="<%=@name%>" class="form-control" required=""></input>
+
+		<label>Description</label>
+		<input type="text" name="description" value="<%=@desc%>" class="form-control" required=""></input>
+
+
+		<label>Normal Ball</label>
+		<input type="text" name="normal_ball" value="<%=@normalBall%>" class="form-control"></input>
+
+		<label>Power Ball</label>
+		<input type="text" name="power_ball" value="<%=@powerBall%>" class="form-control">
+
+		<label>Draw Day</label>
+		<input type="date" name="draw_day" value="<%=@drawDay%>" class="form-control">
+
+		<input type="submit" name="submit" value="Save Changes" class="btn btn-primary"></input>
+		</div>
+	</div>
+
+</form>
+

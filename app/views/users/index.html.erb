@@ -1,0 +1,26 @@
+<!-- <meta http-equiv="refresh" content="5"> -->
+<% provide(:title, 'All users') %>
+<h1>All users</h1>
+<%= will_paginate %>
+
+<ul class="users">
+	<% @users.each do |user| %>
+		<li>
+			<%= link_to gravatar_for(user, size: 50), user %>
+			<%= link_to user.username, user %>
+
+			<% if current_user.role? && !current_user?(user) %>
+		  <!-- | <%= link_to "delete", user, method: :delete,
+						data: { confirm: "You sure?" } %> -->
+						
+			
+			|
+
+		<% end %>
+
+
+		</li>
+		<% end %>
+</ul>
+
+<%= will_paginate %>

@@ -1,0 +1,38 @@
+
+<center><h3>Update Game</h3></center></br>
+</div>
+<form  action="/games/update_balls" method="post" name="" id="">
+
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+		<input type="hidden" name="id" value="<%=@id%>">
+			<label>Select Game</label>
+			<input type="text" name="game_name" value="<%=@name%>" class="form-control" required=""></input>
+			<label>Ball #1</label>
+			<input type="text" name="first_ball" value="<%=@firstBall%>" class="form-control" required=""></input>
+
+			<label>Ball #2</label>
+			<input type="text" name="second_ball" value="<%=@secondBall%>" class="form-control" required=""></input>
+
+
+			<label>Ball #3</label>
+			<input type="text" name="third_ball" value="<%=@thirdBall%>" class="form-control"></input>
+
+			<label>Ball #4</label>
+			<input type="text" name="fourth_ball" value="<%=@fourthBall%>" class="form-control">
+
+			<label>Ball #5</label>
+			<input type="text" name="fifth_ball" value="<%=@fifthBall%>" class="form-control">
+
+			<label>Power Ball #1</label>
+			<input type="text" name="power_ball" value="<%=@powerBall%>" class="form-control">
+
+			<label>Draw Date</label>
+			<input type="date" name="draw_date" value="<%=@drawDate%>" class="form-control">
+
+		<input type="submit" name="submit" value="Save Changes" class="btn btn-primary"></input>
+		</div>
+	</div>
+
+</form>
+

@@ -1,0 +1,60 @@
+<style type="text/css">
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #337ab7;
+    color: white;
+}
+
+</style>
+<center><h3> Tickets</h3></center></br>
+<form action="/tickets/show" method="get">
+  <input type="text" name ="ticket_number"  style="width: 300px;"  placeholder="Search a Ticket Number" class="form-control" required></input>
+  <input type="submit" name="submit" id="submit" style="width: 300px;" value="Search" class="btn btn-primary"></input>
+</form>
+<br>
+<table border = 1>
+  <tr>
+  <th>Game Name</th>
+  <th>First Ball</th>
+  <th>Second Ball</th>
+  <th>Third Ball</th>
+  <th>Fourth Ball</th>
+  <th>Fifth Ball</th>
+  <th>Power Ball</th>
+  <th>Purchase Date</th>
+  <th>Agent</th>
+  <th>Ticket Number</th>
+  </tr>
+
+  
+  <% @a.transpose.map do |id, f, s, t, ft, ff, pb, date, user, tknumber|%>
+<tr>
+
+    <td><%= id %></td>
+    <td><%= f %></td>
+    <td><%= s %></td>
+    <td><%= t %></td>
+    <td><%= ft %></td>
+    <td><%= ff %></td>
+    <td><%= pb %></td>
+    <td><%= date %></td>
+    <td><%= user %></td>
+    <td><%= tknumber %></td>
+    
+
+</tr>
+<%end %>
+
+</table>

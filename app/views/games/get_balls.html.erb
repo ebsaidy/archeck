@@ -1,0 +1,55 @@
+<style type="text/css">
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #337ab7;
+    color: white;
+}
+
+</style>
+<center><h3> Winning Balls</h3></center></br>
+<table border = 1>
+  <tr>
+  <th>Game Name</th>
+  <th>First Ball</th>
+  <th>Second Ball</th>
+  <th>Third Ball</th>
+  <th>Fourth Ball</th>
+  <th>Fifth Ball</th>
+  <th>Power Ball</th>
+  <th>Draw Date</th>
+  <th>Edit</th>
+  <th>Delete</th>
+  </tr>
+
+  
+  <% @a.transpose.map do |n, f, s, t, ft, ff, pb, date, id|%>
+<tr>
+
+    <td><%= n %></td>
+    <td><%= f %></td>
+    <td><%= s %></td>
+    <td><%= t %></td>
+    <td><%= ft %></td>
+    <td><%= ff %></td>
+    <td><%= pb %></td>
+    <td><%= date %></td>
+    <td><%= link_to image_tag("pencil.png", alt: "edit"), {:controller => 'games', :action => 'edit_balls', :id => id }, :method => :get%></td>
+    <td><%= link_to image_tag("delete.gif", alt: "delete"), {:controller => 'games', :action => 'destroy', :id => id }, :method => :delete, data: { confirm: "Are you sure You want to delete?" } %></td>
+    
+
+</tr>
+<%end %>
+
+</table>

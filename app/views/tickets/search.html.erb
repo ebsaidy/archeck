@@ -1,0 +1,55 @@
+<style type="text/css">
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #337ab7;
+    color: white;
+}
+
+</style>
+<center><h3> Search Result</h3></center></br>
+
+<table border = 1>
+  <tr>
+  <th>Game Name</th>
+  <th>First Ball</th>
+  <th>Second Ball</th>
+  <th>Third Ball</th>
+  <th>Fourth Ball</th>
+  <th>Fifth Ball</th>
+  <th>Power Ball</th>
+  <th>Purchase Date</th>
+  <th>Agent</th>
+  <th>Ticket Number</th>
+  </tr>
+
+
+<tr>
+
+    <td><%= @name %></td>
+    <td><%= @firstBall %></td>
+    <td><%= @secondBall %></td>
+    <td><%= @thirdBall %></td>
+    <td><%= @fourthBall %></td>
+    <td><%= @fifthBall %></td>
+    <td><%= @fortuneBall %></td>
+    <td><%= @createdAt %></td>
+    <td><%= @user %></td>
+    <td><%= @ticketNumber %></td>
+    
+
+</tr>
+<%end %>
+
+</table>
