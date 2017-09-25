@@ -18,7 +18,12 @@ th {
 }
 
 </style>
-<center><h3> Winning Balls</h3></center></br>
+<center><h3> Tickets</h3></center></br>
+<form action="/webtickets/show" method="get">
+  <input type="text" name ="ticket_number"  style="width: 300px;"  placeholder="Search a Ticket Number" class="form-control" required></input>
+  <input type="submit" name="submit" id="submit" style="width: 300px;" value="Search" class="btn btn-primary"></input>
+</form>
+<br>
 <table border = 1>
   <tr>
   <th>Game Name</th>
@@ -28,16 +33,16 @@ th {
   <th>Fourth Ball</th>
   <th>Fifth Ball</th>
   <th>Power Ball</th>
-  <th>Draw Date</th>
-  <th>Edit</th>
-  <th>Delete</th>
+  <th>Purchase Date</th>
+  <th>Agent</th>
+  <th>Ticket Number</th>
   </tr>
 
   
-  <% @a.transpose.map do |n, f, s, t, ft, ff, pb, date, id|%>
+  <% @a.transpose.map do |id, f, s, t, ft, ff, pb, date, user, tknumber|%>
 <tr>
 
-    <td><%= n %></td>
+    <td><%= id %></td>
     <td><%= f %></td>
     <td><%= s %></td>
     <td><%= t %></td>
@@ -45,8 +50,8 @@ th {
     <td><%= ff %></td>
     <td><%= pb %></td>
     <td><%= date %></td>
-    <td><%= link_to image_tag("pencil.png", alt: "edit"), {:controller => 'games', :action => 'edit_balls', :id => id }, :method => :get%></td>
-    <td><%= link_to image_tag("delete.gif", alt: "delete"), {:controller => 'games', :action => 'destroy', :id => id }, :method => :delete, data: { confirm: "Are you sure You want to delete?" } %></td>
+    <td><%= user %></td>
+    <td><%= tknumber %></td>
     
 
 </tr>

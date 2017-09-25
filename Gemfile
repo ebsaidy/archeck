@@ -18,13 +18,15 @@ gem 'will_paginate',      '3.1.5'
 gem 'bootstrap-will_paginate',  '0.0.10'
 
 # Use mysql as the database for Active Record
-# gem 'mysql2', '>= 0.3.13', '< 0.5'
+gem 'mysql2', '>= 0.3.13', '< 0.5'
 # Use SCSS for stylesheets
 # gem 'bootstrap-sass', :git => 'https://github.com/twbs/bootstrap-sass.git', :branch => 'next'
 gem 'bootstrap-sass', :git => 'git://github.com/thomas-mcdonald/bootstrap-sass.git'
 gem 'sass-rails', '~> 5.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
+gem 'active_model_serializers', '~> 0.10.6'
+gem 'activemodel-serializers-xml'
 # Use SCSS for stylesheets
 # gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -44,7 +46,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'nokogiri'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

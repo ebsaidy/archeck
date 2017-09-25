@@ -1,0 +1,20 @@
+<table border = 1>
+  <tr>
+  <th>Name of Game</th>
+  <th>Description</th>
+  <th>Normal Ball</th>
+  
+  </tr>
+
+	
+  <% @date.each do |d|%>
+<tr>
+
+    
+  	<td><%= d.name_of_game %></td>
+    <td><%= d.description %></td>
+  	<td><%= d.no_of_balls %></td>
+    
+</tr>
+<%end %>
+<h1><%= @test %></h1>
